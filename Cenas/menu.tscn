@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck6bukoksgftq"]
+
+[ext_resource type="Script" uid="uid://chsra3xrvhbua" path="res://Scripts/menu.gd" id="1_u1n12"]
+[ext_resource type="Texture2D" uid="uid://dbvncpfbu6sko" path="res://Recursos/Kings and Pigs/Sprites/Kings and Pigs.png" id="2_vpgfy"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u1n12")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -61.0
+offset_right = 93.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="botao_play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "PLAY"
+
+[node name="botao_sair" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SAIR
+"
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(323, 43)
+scale = Vector2(4.65672, 7.21429)
+texture = ExtResource("2_vpgfy")
+
+[connection signal="pressed" from="VBoxContainer/botao_play" to="." method="_on_botao_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/botao_sair" to="." method="_on_botao_sair_pressed"]

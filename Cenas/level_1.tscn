@@ -1,0 +1,216 @@
+[gd_scene load_steps=32 format=3 uid="uid://t6mvvxy66cia"]
+
+[ext_resource type="Script" uid="uid://cjnvqbir3qv2u" path="res://Scripts/level_1.gd" id="1_22kpd"]
+[ext_resource type="PackedScene" uid="uid://crykw7343crwd" path="res://Cenas/chao_.tscn" id="1_mnlen"]
+[ext_resource type="PackedScene" uid="uid://iire0qqnhtu4" path="res://Cenas/jogador.tscn" id="2_22kpd"]
+[ext_resource type="Script" uid="uid://bs0khxek6k3sq" path="res://Cenas/diamante.gd" id="3_7d63f"]
+[ext_resource type="Texture2D" uid="uid://evtt5a2pyk84" path="res://Recursos/Kings and Pigs/Sprites/12-Live and Coins/Big Diamond Idle (18x14).png" id="3_57qif"]
+[ext_resource type="Texture2D" uid="uid://dfvgg4jch80w5" path="res://Recursos/Kings and Pigs/Sprites/11-Door/Opening (46x56).png" id="4_qd5lc"]
+[ext_resource type="Texture2D" uid="uid://dity0wuso2833" path="res://Recursos/Kings and Pigs/Sprites/11-Door/Closiong (46x56).png" id="5_engj6"]
+[ext_resource type="Texture2D" uid="uid://bg4b87uo60g5p" path="res://Recursos/Kings and Pigs/Sprites/11-Door/Idle.png" id="5_mmet4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7d63f"]
+radius = 44.9306
+height = 89.8613
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grajh"]
+atlas = ExtResource("3_57qif")
+region = Rect2(0, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2gnu"]
+atlas = ExtResource("3_57qif")
+region = Rect2(18, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8kol"]
+atlas = ExtResource("3_57qif")
+region = Rect2(36, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh6tk"]
+atlas = ExtResource("3_57qif")
+region = Rect2(54, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfbdd"]
+atlas = ExtResource("3_57qif")
+region = Rect2(72, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5rkp"]
+atlas = ExtResource("3_57qif")
+region = Rect2(90, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6prxd"]
+atlas = ExtResource("3_57qif")
+region = Rect2(108, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8lip"]
+atlas = ExtResource("3_57qif")
+region = Rect2(126, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75gas"]
+atlas = ExtResource("3_57qif")
+region = Rect2(144, 0, 18, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hek0f"]
+atlas = ExtResource("3_57qif")
+region = Rect2(162, 0, 18, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2gudm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grajh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2gnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8kol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vh6tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfbdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5rkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6prxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8lip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75gas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hek0f")
+}],
+"loop": true,
+"name": &"diamante",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_engj6"]
+atlas = ExtResource("4_qd5lc")
+region = Rect2(0, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmet4"]
+atlas = ExtResource("4_qd5lc")
+region = Rect2(46, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57qif"]
+atlas = ExtResource("4_qd5lc")
+region = Rect2(92, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d63f"]
+atlas = ExtResource("4_qd5lc")
+region = Rect2(138, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge26e"]
+atlas = ExtResource("4_qd5lc")
+region = Rect2(184, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdpfv"]
+atlas = ExtResource("5_mmet4")
+region = Rect2(0, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vnop"]
+atlas = ExtResource("5_engj6")
+region = Rect2(0, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa61h"]
+atlas = ExtResource("5_engj6")
+region = Rect2(46, 0, 46, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uhnw"]
+atlas = ExtResource("5_engj6")
+region = Rect2(92, 0, 46, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0vnop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_engj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmet4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57qif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d63f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge26e")
+}],
+"loop": false,
+"name": &"abrindo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdpfv")
+}],
+"loop": true,
+"name": &"fechada",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vnop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa61h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uhnw")
+}],
+"loop": false,
+"name": &"fechando",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_engj6"]
+size = Vector2(2.03196, 18.6503)
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_22kpd")
+
+[node name="Chao_" parent="." instance=ExtResource("1_mnlen")]
+
+[node name="Diamante" type="Area2D" parent="."]
+position = Vector2(823, 110)
+scale = Vector2(0.244823, 0.398048)
+script = ExtResource("3_7d63f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamante"]
+position = Vector2(-1335.66, 168.321)
+shape = SubResource("CapsuleShape2D_7d63f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Diamante"]
+position = Vector2(-1356.08, 175.858)
+scale = Vector2(9.09214, 4.49422)
+sprite_frames = SubResource("SpriteFrames_2gudm")
+animation = &"diamante"
+
+[node name="Player" parent="." instance=ExtResource("2_22kpd")]
+position = Vector2(572, 40)
+scale = Vector2(0.244823, 0.398048)
+
+[node name="Area_chegada" type="Area2D" parent="." groups=["Player"]]
+
+[node name="portas_animation" type="AnimatedSprite2D" parent="Area_chegada"]
+position = Vector2(650, 68)
+sprite_frames = SubResource("SpriteFrames_0vnop")
+animation = &"fechada"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_chegada"]
+position = Vector2(650.324, 67)
+rotation = -3.14159
+scale = Vector2(22.9569, -3.15203)
+shape = SubResource("RectangleShape2D_engj6")
+
+[connection signal="body_entered" from="Diamante" to="." method="_on_diamante_body_entered"]
+[connection signal="body_entered" from="Area_chegada" to="." method="_on_area_chegada_body_entered"]
