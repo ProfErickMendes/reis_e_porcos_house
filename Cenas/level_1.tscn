@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://cjnvqbir3qv2u" path="res://Scripts/level_1.gd" id="1_22kpd"]
 [ext_resource type="PackedScene" uid="uid://crykw7343crwd" path="res://Cenas/chao_.tscn" id="1_mnlen"]
 [ext_resource type="PackedScene" uid="uid://iire0qqnhtu4" path="res://Cenas/jogador.tscn" id="2_22kpd"]
-[ext_resource type="PackedScene" uid="uid://3ktka51iwlj4" path="res://Cenas/diamante.tscn" id="3_57qif"]
 [ext_resource type="Texture2D" uid="uid://dfvgg4jch80w5" path="res://Recursos/Kings and Pigs/Sprites/11-Door/Opening (46x56).png" id="4_qd5lc"]
 [ext_resource type="Texture2D" uid="uid://dity0wuso2833" path="res://Recursos/Kings and Pigs/Sprites/11-Door/Closiong (46x56).png" id="5_engj6"]
 [ext_resource type="Texture2D" uid="uid://bg4b87uo60g5p" path="res://Recursos/Kings and Pigs/Sprites/11-Door/Idle.png" id="5_mmet4"]
+[ext_resource type="PackedScene" uid="uid://3ktka51iwlj4" path="res://Cenas/diamante.tscn" id="7_57qif"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_engj6"]
 atlas = ExtResource("4_qd5lc")
@@ -127,8 +127,16 @@ shape = SubResource("RectangleShape2D_engj6")
 
 [node name="Diamante" parent="." instance=ExtResource("3_57qif")]
 position = Vector2(120, 141)
+[node name="Diamante" parent="." instance=ExtResource("7_57qif")]
+position = Vector2(177, 219)
 
-[node name="Diamante2" parent="." instance=ExtResource("3_57qif")]
-position = Vector2(274, 236)
+[node name="Diamante2" parent="." instance=ExtResource("7_57qif")]
+position = Vector2(16, 102)
+
+[node name="Diamante3" parent="." instance=ExtResource("7_57qif")]
+position = Vector2(87, 108)
+
+[node name="Diamante4" parent="." instance=ExtResource("7_57qif")]
+position = Vector2(299, 223)
 
 [connection signal="body_entered" from="Area_chegada" to="." method="_on_area_chegada_body_entered"]
