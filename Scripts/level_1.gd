@@ -1,5 +1,5 @@
 extends Node2D
-
+#atualizaçao
 # Variável para controlar se o nível foi completado
 var nivel_completado = false
 
